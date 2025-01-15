@@ -1,11 +1,31 @@
 import './index.css'; // Tailwind CSS import
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/home';
+import About from './components/pages/about';
+import Services from './components/pages/services';
+import Blog from './components/pages/blog';
+import Announcement from './components/pages/announcement';
+import Contact from './components/pages/contact';
+
+
+
 
 function App() {
   return (
-    <div className="text-5xl text-center mt-5 border-red-900">
-      <h1 className='text-[red]'>
-        welcome to Typescript with  vite plus tailwand css
-      </h1>
+    <div>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/announcement' element={<Announcement />} />
+          <Route path='/contact' element={<Contact />} />
+
+
+        </Routes>
+      </Router>
     </div>
   );
 }
