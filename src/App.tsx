@@ -5,11 +5,15 @@ import Services from "./pages/services";
 import Blog from "./pages/blog";
 import Announcement from "./pages/announcement";
 import Contact from "./pages/contact";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <div>
       <Router>
+        <Header />
+        <Footer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

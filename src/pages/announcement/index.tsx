@@ -1,5 +1,5 @@
 function Announcement() {
-  return <div>Announcement page is here</div>;
+  return <div></div>;
 }
 
 export default Announcement;
