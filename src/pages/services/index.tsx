@@ -1,9 +1,5 @@
-import React from 'react';  
-
-function Services(): React.ReactElement {  
-  return (
-    <div>Services page  is here</div>  
-  );
+function Services() {
+  return <div>Services page is here</div>;
 }
 
-export default Services;  
+export default Services;

@@ -1,9 +1,5 @@
-import React from 'react';  
-
-function About(): React.ReactElement {  
-  return (
-    <div>About page  is here</div>  
-  );
+function About() {
+  return <div>About page is here</div>;
 }
 
-export default About;  
+export default About;

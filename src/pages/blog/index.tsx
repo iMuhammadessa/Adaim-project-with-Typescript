@@ -1,9 +1,5 @@
-import React from 'react';  
-
-function Blog(): React.ReactElement {  
-  return (
-    <div>Blog page  is here</div>  
-  );
+function Blog() {
+  return <div>Blog page is here</div>;
 }
 
-export default Blog;  
+export default Blog;
