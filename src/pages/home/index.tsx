@@ -1,8 +1,5 @@
 import HeroSection from "../../components/banner";
 import OurTeam from "../../components/home/our-Team";
-<<<<<<< HEAD
-import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
-=======
 import {
   FaFacebook,
   FaInstagram,
@@ -13,7 +10,6 @@ import {
   FaEdit,
 } from "react-icons/fa";
 
->>>>>>> 74f0792 (Updated home page)
 const sliderImages = [
   "/images/home/containerpic1.jpg",
   "/images/home/containerpic2.jpg",
