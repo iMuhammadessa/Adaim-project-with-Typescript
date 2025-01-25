@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 >>>>>>> f61d9ea (our Team Component has been designed)
 =======
 >>>>>>> f311675 (our Team component has been designed)
+=======
+>>>>>>> f3116751e3a88e0084f61c23d74febcf1861f806
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
