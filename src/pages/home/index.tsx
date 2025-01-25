@@ -1,10 +1,14 @@
 import HeroSection from "../../components/banner";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import OurTeam from "../../components/home/our-Team";
 =======
 import OurCustomers from "../../components/home/our-customers";
 >>>>>>> 75ef17b (our-customer-component designed)
+=======
+import OurCustomers from "../../components/home/our-customers";
+>>>>>>> 75ef17b4b35fa5dad195df491ec1440b8e2bc6fd
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -88,6 +92,7 @@ function HomePage() {
         sliderImages={sliderImages}
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
@@ -117,6 +122,9 @@ function HomePage() {
 =======
       <OurCustomers />
 >>>>>>> 75ef17b (our-customer-component designed)
+=======
+      <OurCustomers />
+>>>>>>> 75ef17b4b35fa5dad195df491ec1440b8e2bc6fd
     </>
   );
 }
