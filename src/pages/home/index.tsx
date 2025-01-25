@@ -1,4 +1,5 @@
 import HeroSection from "../../components/banner";
+import OurCustomers from "../../components/home/our-customers";
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -15,6 +16,7 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
+      <OurCustomers />
     </>
   );
 }
