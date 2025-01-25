@@ -1,6 +1,10 @@
 import HeroSection from "../../components/banner";
+<<<<<<< HEAD
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import OurTeam from "../../components/home/our-Team";
+=======
+import OurCustomers from "../../components/home/our-customers";
+>>>>>>> 75ef17b (our-customer-component designed)
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -83,6 +87,7 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
+<<<<<<< HEAD
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
@@ -109,6 +114,9 @@ function HomePage() {
         ))}
       </div>
       <OurTeam />
+=======
+      <OurCustomers />
+>>>>>>> 75ef17b (our-customer-component designed)
     </>
   );
 }
