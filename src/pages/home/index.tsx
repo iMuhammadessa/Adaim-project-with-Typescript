@@ -1,6 +1,6 @@
 import HeroSection from "../../components/banner";
-import SocialMediaCard from "../../components/SocialMediaCards";
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+import OurTeam from "../../components/home/our-Team";
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -108,6 +108,7 @@ function HomePage() {
           </div>
         ))}
       </div>
+      <OurTeam />
     </>
   );
 }
