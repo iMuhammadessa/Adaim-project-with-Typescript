@@ -1,4 +1,5 @@
 import HeroSection from "../../components/banner";
+import OurPackages from "./ourpackages";
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -8,12 +9,15 @@ const sliderImages = [
 
 function AboutPage() {
   return (
-    <HeroSection
-      backgroundimage="/images/home/containerpic1.jpg"
-      title="About"
-      description="Welcome to Ad-Aim Marketing Agency"
-      sliderImages={sliderImages}
-    />
+    <>
+      <HeroSection
+        backgroundimage={sliderImages[0]} // Dynamically use the first image from the array
+        title="About"
+        description="Welcome to Ad-Aim Marketing Agency"
+        sliderImages={sliderImages}
+      />
+      <OurPackages />
+    </>
   );
 }
 
