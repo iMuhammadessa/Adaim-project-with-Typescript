@@ -1,9 +1,5 @@
 import HeroSection from "../../components/banner";
 import OurTeam from "../../components/home/our-Team";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
-=======
 import {
   FaFacebook,
   FaInstagram,
@@ -13,10 +9,7 @@ import {
   FaShopify,
   FaEdit,
 } from "react-icons/fa";
-=======
->>>>>>> 183b25c425471301dd107bc31ccf60df2353ac91
 
->>>>>>> 74f0792 (Updated home page)
 const sliderImages = [
   "/images/home/containerpic1.jpg",
   "/images/home/containerpic2.jpg",
@@ -98,23 +91,35 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
-<<<<<<< HEAD
 
-      <section className="marketing-services">
-        <h2>Our Marketing Services</h2>
-        <div className="services-grid">
-          {marketingData.map((service) => (
-            <div key={service.id} className="service-card">
-              <service.icon size={50} className="service-icon" />
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
+      <section className="marketing-services py-16 bg-gray-100">
+        <h2 className="text-center text-3xl font-bold mb-8">
+          Social Media Platform Marketing Services
+        </h2>
+        <div className="services-container flex flex-wrap justify-center gap-8 px-4">
+          {marketingData.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={service.id}
+                className="service-card bg-white shadow-lg rounded-lg p-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center justify-between hover:shadow-2xl transition-all duration-300"
+              >
+                <IconComponent
+                  size={50}
+                  className="service-icon mb-4 text-blue-500"
+                />
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-center">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-=======
->>>>>>> 183b25c425471301dd107bc31ccf60df2353ac91
       <OurTeam />
     </>
   );
