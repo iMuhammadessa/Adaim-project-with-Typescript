@@ -1,6 +1,7 @@
 import HeroSection from "../../components/banner";
 import OurTeam from "../../components/home/our-Team";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 =======
 import {
@@ -12,6 +13,8 @@ import {
   FaShopify,
   FaEdit,
 } from "react-icons/fa";
+=======
+>>>>>>> 183b25c425471301dd107bc31ccf60df2353ac91
 
 >>>>>>> 74f0792 (Updated home page)
 const sliderImages = [
@@ -95,6 +98,7 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
+<<<<<<< HEAD
 
       <section className="marketing-services">
         <h2>Our Marketing Services</h2>
@@ -109,6 +113,8 @@ function HomePage() {
         </div>
       </section>
 
+=======
+>>>>>>> 183b25c425471301dd107bc31ccf60df2353ac91
       <OurTeam />
     </>
   );
