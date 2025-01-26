@@ -1,6 +1,19 @@
 import HeroSection from "../../components/banner";
 import OurTeam from "../../components/home/our-Team";
+<<<<<<< HEAD
 import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
+=======
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaGoogle,
+  FaShopify,
+  FaEdit,
+} from "react-icons/fa";
+
+>>>>>>> 74f0792 (Updated home page)
 const sliderImages = [
   "/images/home/containerpic1.jpg",
   "/images/home/containerpic2.jpg",
@@ -41,7 +54,7 @@ const marketingData = [
     title: "Google Ads",
     description:
       "Enhance your online presence and maximize your digital reach with our targeted and expert Google Ads solutions and strategies.",
-    icon: FaFacebook,
+    icon: FaGoogle,
   },
   {
     id: 6,
@@ -62,14 +75,14 @@ const marketingData = [
     title: "Video Editing",
     description:
       "Enhance your video content and captivate your audience with our professional and tailored video editing services and solutions.",
-    icon: FaYoutube,
+    icon: FaEdit,
   },
   {
     id: 9,
     title: "Shopify Marketing",
     description:
       "Boost your online store's visibility and elevate your e-commerce business with our specialized and tailored Shopify marketing strategies and solutions.",
-    icon: FaFacebook,
+    icon: FaShopify,
   },
 ];
 
@@ -82,6 +95,20 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
+
+      <section className="marketing-services">
+        <h2>Our Marketing Services</h2>
+        <div className="services-grid">
+          {marketingData.map((service) => (
+            <div key={service.id} className="service-card">
+              <service.icon size={50} className="service-icon" />
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <OurTeam />
     </>
   );
