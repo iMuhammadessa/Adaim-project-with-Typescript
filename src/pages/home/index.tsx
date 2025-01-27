@@ -8,6 +8,7 @@ import {
   FaEdit,
   FaShopify,
 } from "react-icons/fa";
+import OurTeam from "../../components/home/our-Team";
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -83,8 +84,7 @@ const marketingData = [
 
 function HomePage() {
   return (
-    <div>
-      {/* Hero Section */}
+    <>
       <HeroSection
         backgroundimage="/images/home/containerpic1.jpg"
         title="Ad Aim Marketing Agency"
@@ -112,7 +112,9 @@ function HomePage() {
           ))}
         </div>
       </section>
-    </div>
+
+      <OurTeam />
+    </>
   );
 }
 
