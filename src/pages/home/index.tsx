@@ -84,6 +84,7 @@ const marketingData = [
 function HomePage() {
   return (
     <div>
+      {/* Hero Section */}
       <HeroSection
         backgroundimage="/images/home/containerpic1.jpg"
         title="Ad Aim Marketing Agency"
@@ -91,14 +92,22 @@ function HomePage() {
         sliderImages={sliderImages}
       />
 
-      <section>
-        <h2>Our Marketing Services</h2>
-        <div className="marketing-services">
+      {/* Social Media Platform Marketing Services */}
+      <section className="my-10">
+        <h2 className="text-2xl font-bold text-center mb-6">
+          Social Media Platform Marketing Services
+        </h2>
+        <div className="flex flex-wrap justify-start gap-6">
           {marketingData.map(({ id, title, description, icon: Icon }) => (
-            <div key={id} className="marketing-item">
-              <Icon size={40} />
-              <h3>{title}</h3>
-              <p>{description}</p>
+            <div
+              key={id}
+              className={`w-full sm:w-1/2 lg:w-1/3 xl:w-1/3 p-4 bg-white shadow-lg rounded-md flex flex-col items-center`}
+            >
+              <Icon size={40} className="mb-4 text-blue-500" />
+              <h3 className="text-lg font-semibold text-center">{title}</h3>
+              <p className="text-sm text-gray-600 text-center mt-2">
+                {description}
+              </p>
             </div>
           ))}
         </div>
