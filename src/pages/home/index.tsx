@@ -1,4 +1,13 @@
 import HeroSection from "../../components/banner";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaGoogle,
+  FaTiktok,
+  FaEdit,
+  FaShopify,
+} from "react-icons/fa";
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -74,12 +83,27 @@ const marketingData = [
 
 function HomePage() {
   return (
-    <HeroSection
-      backgroundimage="/images/home/containerpic1.jpg"
-      title="Ad Aim Marketing Agency"
-      description="Where precision meets impact, delivering excellence for your brand’s success"
-      sliderImages={sliderImages}
-    />
+    <div>
+      <HeroSection
+        backgroundimage="/images/home/containerpic1.jpg"
+        title="Ad Aim Marketing Agency"
+        description="Where precision meets impact, delivering excellence for your brand’s success"
+        sliderImages={sliderImages}
+      />
+
+      <section>
+        <h2>Our Marketing Services</h2>
+        <div className="marketing-services">
+          {marketingData.map(({ id, title, description, icon: Icon }) => (
+            <div key={id} className="marketing-item">
+              <Icon size={40} />
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 
