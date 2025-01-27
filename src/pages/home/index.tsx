@@ -1,8 +1,6 @@
 import HeroSection from "../../components/banner";
-<<<<<<< HEAD
-=======
 import OurTeam from "../../components/home/our-Team";
->>>>>>> 0101c9e (our-team-component updated)
+
 import {
   FaFacebook,
   FaInstagram,
@@ -12,10 +10,6 @@ import {
   FaEdit,
   FaShopify,
 } from "react-icons/fa";
-<<<<<<< HEAD
-import OurTeam from "../../components/home/our-Team";
-=======
->>>>>>> 0101c9e (our-team-component updated)
 
 const sliderImages = [
   "/images/home/containerpic1.jpg",
@@ -99,52 +93,25 @@ function HomePage() {
         sliderImages={sliderImages}
       />
 
-<<<<<<< HEAD
-      {/* Social Media Platform Marketing Services */}
-      <section className="my-10">
-        <h2 className="text-2xl font-bold text-center mb-6">
+      <section className="my-16 px-6 py-12 bg-gradient-to-r from-blue-100 to-blue-50">
+        <h2 className="text-3xl font-bold text-center  mb-10">
           Social Media Platform Marketing Services
         </h2>
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {marketingData.map(({ id, title, description, icon: Icon }) => (
             <div
               key={id}
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 bg-white shadow-lg rounded-md flex flex-col items-center"
+              className="flex flex-col items-center p-6 bg-white shadow-xl rounded-xl transform transition duration-300 hover:scale-105"
             >
-              <Icon size={40} className="mb-4 text-blue-500" />
-              <h3 className="text-lg font-semibold text-center">{title}</h3>
-              <p className="text-sm text-gray-600 text-center mt-2">
+              <Icon size={50} className="mb-6 text-blue-600" />
+              <h3 className="text-xl font-semibold text-center text-gray-800">
+                {title}
+              </h3>
+              <p className="text-sm text-gray-500 text-center mt-2">
                 {description}
               </p>
             </div>
           ))}
-=======
-      <section className="marketing-services py-16 bg-gray-100">
-        <h2 className="text-center text-3xl font-bold mb-8">
-          Social Media Platform Marketing Services
-        </h2>
-        <div className="services-container flex flex-wrap justify-center gap-8 px-4">
-          {marketingData.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={service.id}
-                className="service-card bg-white shadow-lg rounded-lg p-6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center justify-between hover:shadow-2xl transition-all duration-300"
-              >
-                <IconComponent
-                  size={50}
-                  className="service-icon mb-4 text-blue-500"
-                />
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-center">
-                  {service.description}
-                </p>
-              </div>
-            );
-          })}
->>>>>>> 0101c9e (our-team-component updated)
         </div>
       </section>
 
