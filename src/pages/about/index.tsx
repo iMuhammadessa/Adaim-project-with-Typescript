@@ -1,4 +1,5 @@
 import HeroSection from "../../components/banner";
+import WhoWeAreSection from "../../components/about/whoweare";
 import OurPackages from "../../components/about/ourpackages";
 import WhyChooseUs from "../../components/about/whychooseus";
 
@@ -17,6 +18,9 @@ function AboutPage() {
         description="Welcome to Ad-Aim Marketing Agency"
         sliderImages={sliderImages}
       />
+
+      <WhoWeAreSection />
+
       <OurPackages />
       <WhyChooseUs />
     </>
