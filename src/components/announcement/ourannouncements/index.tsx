@@ -20,12 +20,10 @@ const announcements = [
 function OurAnnouncements() {
   return (
     <div className="px-4 py-8 mx-auto max-w-screen-lg">
-      {/* Heading */}
       <div className="font-bold text-3xl sm:text-4xl md:text-5xl mt-16 text-center">
         Our Announcements
       </div>
 
-      {/* Announcements Container */}
       <div className="mt-8 flex justify-between items-stretch gap-6">
         {announcements.map((announcement) => (
           <div
