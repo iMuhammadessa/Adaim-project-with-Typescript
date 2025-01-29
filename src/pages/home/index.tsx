@@ -1,8 +1,9 @@
 import HeroSection from "../../components/banner";
+import HelpSuccessBanner from "../../components/home/helpsuccessbanner";
 import OurTeam from "../../components/home/our-Team";
 import OurCustomers from "../../components/home/our-customers";
 import ReachOut from "../../components/home/reach-out";
-import HelpSuccessBanner from "../../components/home/helpsuccessbanner";
+
 import {
   FaFacebook,
   FaInstagram,
@@ -94,7 +95,7 @@ function HomePage() {
         description="Where precision meets impact, delivering excellence for your brand’s success"
         sliderImages={sliderImages}
       />
-
+      <HelpSuccessBanner />
       <section className="my-16 px-6 py-12 bg-gradient-to-r from-blue-100 to-blue-50">
         <h2 className="text-3xl font-bold text-center  mb-10">
           Social Media Platform Marketing Services
@@ -116,7 +117,7 @@ function HomePage() {
           ))}
         </div>
       </section>
-      <HelpSuccessBanner />
+
       <OurTeam />
       <OurCustomers />
       <ReachOut />
