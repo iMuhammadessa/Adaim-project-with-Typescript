@@ -1,7 +1,7 @@
 import HeroSection from "../../components/banner";
 import HelpSuccessBanner from "../../components/home/helpsuccessbanner";
+import CEOProfile from "../../components/home/ceo-profile";
 import OurTeam from "../../components/home/our-Team";
-import CEOProfile from "../../components/home/CEO-Profile";
 import OurCustomers from "../../components/home/our-customers";
 import ReachOut from "../../components/home/reach-out";
 
@@ -118,9 +118,8 @@ function HomePage() {
           ))}
         </div>
       </section>
-
-      <OurTeam />
       <CEOProfile />
+      <OurTeam />
       <OurCustomers />
       <ReachOut />
     </>
