@@ -2,7 +2,7 @@ import HeroSection from "../../components/banner";
 import OurTeam from "../../components/home/our-Team";
 import OurCustomers from "../../components/home/our-customers";
 import ReachOut from "../../components/home/reach-out";
-
+import HelpSuccessBanner from "../../components/home/helpsuccessbanner";
 import {
   FaFacebook,
   FaInstagram,
@@ -116,7 +116,7 @@ function HomePage() {
           ))}
         </div>
       </section>
-
+      <HelpSuccessBanner />
       <OurTeam />
       <OurCustomers />
       <ReachOut />
