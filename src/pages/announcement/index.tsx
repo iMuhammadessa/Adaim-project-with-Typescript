@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function Announcement() {
+  return <div></div>;
+=======
 import HeroSection from "../../components/banner";
 import OurAnnouncement from "../../components/announcement/ourannouncements";
 
@@ -19,6 +23,7 @@ function AnnouncementPage() {
       <OurAnnouncement />
     </>
   );
+>>>>>>> main
 }
 
 export default AnnouncementPage;

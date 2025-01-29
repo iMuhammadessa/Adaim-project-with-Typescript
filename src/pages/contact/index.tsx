@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function Contact() {
+  return <div></div>;
+=======
 import HeroSection from "../../components/banner";
 
 const sliderImages = [
@@ -15,6 +19,7 @@ function ContactPage() {
       sliderImages={sliderImages}
     />
   );
+>>>>>>> main
 }
 
 export default ContactPage;

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function About() {
+  return <div></div>;
+=======
 import HeroSection from "../../components/banner";
 import WhoWeAreSection from "../../components/about/whoweare";
 import OurPackages from "../../components/about/ourpackages";
@@ -25,6 +29,7 @@ function AboutPage() {
       <WhyChooseUs />
     </>
   );
+>>>>>>> main
 }
 
 export default AboutPage;

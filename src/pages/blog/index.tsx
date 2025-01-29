@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function Blog() {
+  return <div></div>;
+=======
 import HeroSection from "../../components/banner";
 import OurBlog from "../../components/blog";
 const sliderImages = [
@@ -18,6 +22,7 @@ function BlogPage() {
       <OurBlog />
     </>
   );
+>>>>>>> main
 }
 
 export default BlogPage;

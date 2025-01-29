@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+function Services() {
+  return <div></div>;
+=======
 import HeroSection from "../../components/banner";
 import Services from "../../components/Services";
 
@@ -20,6 +24,7 @@ function ServicesPage() {
       <Services />
     </>
   );
+>>>>>>> main
 }
 
 export default ServicesPage;
