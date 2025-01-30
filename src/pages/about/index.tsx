@@ -20,7 +20,6 @@ function AboutPage() {
       />
 
       <WhoWeAreSection />
-
       <OurPackages />
       <WhyChooseUs />
     </>
