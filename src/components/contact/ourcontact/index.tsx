@@ -39,9 +39,8 @@ function ContactForm() {
         <Formik
           initialValues={initialFormValues}
           validationSchema={validationSchema}
-          onSubmit={(values, { resetForm }) => {
+          onSubmit={(Values, { resetForm }) => {
             console.log(" Form Submitted!");
-            console.log("Form Data:", values);
             resetForm();
             alert("Form Submitted Successfully!");
           }}
