@@ -1,10 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
 
 function Login() {
-  const [message, setMessage] = useState("");
-
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email address")
@@ -21,8 +18,7 @@ function Login() {
     },
     validationSchema,
     onSubmit: (values) => {
-      setMessage("Form submitted successfully!");
-      console.log(values);
+      alert("Login successful");
     },
   });
 
@@ -30,18 +26,6 @@ function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900">Login</h2>
-
-        {message && (
-          <div
-            className={`text-center py-2 px-4 rounded-lg mt-4 ${
-              message === "Form submitted successfully!"
-                ? "bg-green-500 text-white"
-                : "bg-red-500 text-white"
-            }`}
-          >
-            {message}
-          </div>
-        )}
 
         <form onSubmit={formik.handleSubmit} className="mt-8 space-y-6">
           <div className="rounded-md shadow-sm space-y-4">
@@ -65,11 +49,11 @@ function Login() {
                     : "border-gray-300"
                 }`}
               />
-              {formik.touched.email && formik.errors.email ? (
+              {formik.touched.email && formik.errors.email && (
                 <div className="text-red-500 text-sm mt-1">
                   {formik.errors.email}
                 </div>
-              ) : null}
+              )}
             </div>
 
             <div>
@@ -92,15 +76,14 @@ function Login() {
                     : "border-gray-300"
                 }`}
               />
-              {formik.touched.password && formik.errors.password ? (
+              {formik.touched.password && formik.errors.password && (
                 <div className="text-red-500 text-sm mt-1">
                   {formik.errors.password}
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={!formik.isValid || formik.isSubmitting}
