@@ -10,16 +10,11 @@ import Footer from "./components/footer";
 import Login from "./pages/login";
 
 function App() {
-  const LoginpageLocation = window.location.pathname;
+  const Loginpage = window.location.pathname === "/login";
 
   return (
     <Router>
-      {LoginpageLocation !== "/login" ? (
-        <>
-          <Header />
-          <Footer />
-        </>
-      ) : null}
+      {Loginpage ? null : <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,6 +25,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+
+      {Loginpage ? null : <Footer />}
     </Router>
   );
 }
