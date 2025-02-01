@@ -10,23 +10,26 @@ import Footer from "./components/footer";
 import Login from "./pages/login";
 
 function App() {
-  const isLoginPage = window.location.pathname === "/login";
+  const LoginpageLocation = window.location.pathname;
 
   return (
     <Router>
-      {!isLoginPage && <Header />}
+      {LoginpageLocation !== "/login" ? (
+        <>
+          <Header />
+          <Footer />
+        </>
+      ) : null}
 
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
-
-      {!isLoginPage && <Footer />}
     </Router>
   );
 }
