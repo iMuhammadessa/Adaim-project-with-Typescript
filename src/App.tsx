@@ -7,11 +7,15 @@ import Announcement from "./pages/announcement";
 import Contact from "./pages/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Login from "./pages/login";
 
 function App() {
+  const isLoginPage = window.location.pathname === "/login";
+
   return (
     <Router>
-      <Header />
+      {!isLoginPage && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -19,8 +23,10 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer />
+
+      {!isLoginPage && <Footer />}
     </Router>
   );
 }
