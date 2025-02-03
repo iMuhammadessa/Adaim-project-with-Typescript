@@ -14,8 +14,7 @@ function App() {
 
   return (
     <Router>
-      {window.location.pathname !== "/Registration" && <Header />}
-
+      {!Registrationpage && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
