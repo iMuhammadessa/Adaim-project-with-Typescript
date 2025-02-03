@@ -12,11 +12,8 @@ import Registration from "./pages/registration";
 function App() {
   return (
     <Router>
-      {window.location.pathname !== "/Registration" && (
-        <>
-          <Header />
-        </>
-      )}
+      {window.location.pathname !== "/Registration" && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
