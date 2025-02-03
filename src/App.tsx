@@ -8,13 +8,15 @@ import Contact from "./pages/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Login from "./pages/login";
+import Registration from "./pages/registration";
 
 function App() {
   const Loginpage = window.location.pathname === "/login";
+  const RegistrationPage = window.location.pathname === "/Registration";
 
   return (
     <Router>
-      {Loginpage ? null : <Header />}
+      {!Loginpage && !RegistrationPage && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,9 +26,10 @@ function App() {
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Registration" element={<Registration />} />
       </Routes>
 
-      {Loginpage ? null : <Footer />}
+      {!Loginpage && !RegistrationPage && <Footer />}
     </Router>
   );
 }
