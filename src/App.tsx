@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Router>
-      {!loginPage && !registrationPage && <Header />}
+      {!loginPage && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,11 +25,12 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
+
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
 
-      {!loginPage && !registrationPage && <Footer />}
+      {!registrationPage && <Footer />}
     </Router>
   );
 }
