@@ -17,8 +17,24 @@ function Login() {
       password: "",
     },
     validationSchema,
-    onSubmit: () => {
-      alert("Login successful");
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch("http://localhost:3009/api/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+
+        const data = await response.json();
+        console.log("Data is Here:", data);
+
+        // save this data intoi local Storage
+        localStorage.setItem("userData", JSON.stringify(data));
+      } catch (error) {
+        console.error("Login failed try again:", error);
+      }
     },
   });
 
