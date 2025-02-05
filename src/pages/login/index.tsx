@@ -19,7 +19,7 @@ function Login() {
     validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await fetch("http://localhost:3009/api/login", {
+        const responseData = await fetch("http://localhost:3009/api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -27,13 +27,14 @@ function Login() {
           body: JSON.stringify(values),
         });
 
-        const data = await response.json();
-        console.log("Data is Here:", data);
+        const data = await responseData.json();
+        console.log("Check the Data:", data);
 
-        // save this data intoi local Storage
-        localStorage.setItem("userData", JSON.stringify(data));
+        if (data.token) {
+          localStorage.setItem("authToken", data.token);
+        }
       } catch (error) {
-        console.error("Login failed try again:", error);
+        console.error("Something went wrong, try again", error);
       }
     },
   });
