@@ -7,15 +7,15 @@ import Announcement from "./pages/announcement";
 import Contact from "./pages/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Login from "./pages/login";
+import Registration from "./pages/registration";
 
 function App() {
-  const Loginpage = window.location.pathname === "/login";
+  const isExactRegistrationPage =
+    window.location.pathname.toLowerCase() === "/registration";
 
   return (
     <Router>
-      {Loginpage ? null : <Header />}
-
+      {!isExactRegistrationPage && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,10 +23,9 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
-
-      {Loginpage ? null : <Footer />}
+      {!isExactRegistrationPage && <Footer />}
     </Router>
   );
 }
