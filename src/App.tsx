@@ -7,12 +7,15 @@ import Announcement from "./pages/announcement";
 import Contact from "./pages/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
+
 import Registration from "./pages/registration";
 
 function App() {
+  const RegistrationPage = window.location.pathname === "/registration";
+
   return (
     <Router>
-      {window.location.pathname !== "/registration" && <Header />}
+      {!RegistrationPage && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,7 +27,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
       </Routes>
 
-      {window.location.pathname !== "/registration" && <Footer />}
+      {!RegistrationPage && <Footer />}
     </Router>
   );
 }
