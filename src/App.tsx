@@ -7,16 +7,17 @@ import Announcement from "./pages/announcement";
 import Contact from "./pages/contact";
 import Header from "./components/header";
 import Footer from "./components/footer";
-
 import Registration from "./pages/registration";
 
 function App() {
-  const RegistrationPage = window.location.pathname === "/registration";
+  const isExactRegistrationPage =
+    window.location.pathname.toLowerCase() === "/registration";
+  // Sirf "/Registration" par header aur footer hide honge
 
   return (
     <Router>
-      {!RegistrationPage && <Header />}
-
+      {!isExactRegistrationPage && <Header />}{" "}
+      {/* Registration page pe header hide hoga */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -26,8 +27,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
-
-      {!RegistrationPage && <Footer />}
+      {!isExactRegistrationPage && <Footer />}{" "}
+      {/* Registration page pe footer bhi hide hoga */}
     </Router>
   );
 }
