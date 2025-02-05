@@ -12,12 +12,10 @@ import Registration from "./pages/registration";
 function App() {
   const isExactRegistrationPage =
     window.location.pathname.toLowerCase() === "/registration";
-  // Sirf "/Registration" par header aur footer hide honge
 
   return (
     <Router>
-      {!isExactRegistrationPage && <Header />}{" "}
-      {/* Registration page pe header hide hoga */}
+      {!isExactRegistrationPage && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,8 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
-      {!isExactRegistrationPage && <Footer />}{" "}
-      {/* Registration page pe footer bhi hide hoga */}
+      {!isExactRegistrationPage && <Footer />}
     </Router>
   );
 }
