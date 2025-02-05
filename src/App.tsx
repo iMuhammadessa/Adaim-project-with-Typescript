@@ -11,12 +11,13 @@ import Login from "./pages/login";
 import Registration from "./pages/registration";
 
 function App() {
+  // Conditions to check for login and registration pages
   const loginPage = window.location.pathname === "/login";
   const registrationPage = window.location.pathname === "/registration";
 
   return (
     <Router>
-      {!loginPage && <Header />}
+      {!loginPage && !registrationPage && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,7 +31,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
       </Routes>
 
-      {!registrationPage && <Footer />}
+      {!loginPage && !registrationPage && <Footer />}
     </Router>
   );
 }
