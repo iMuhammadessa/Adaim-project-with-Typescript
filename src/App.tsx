@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Services from "./pages/services";
@@ -16,14 +11,12 @@ import Login from "./pages/login";
 import Registration from "./pages/registration";
 
 function App() {
-  const location = useLocation(); // Get current location
-
-  const loginPage = location.pathname === "/login";
-  const registrationPage = location.pathname === "/registration";
+  const loginPage = window.location.pathname === "/login";
+  const registrationPage = window.location.pathname === "/registration";
 
   return (
     <Router>
-      {/* Conditionally render Header and Footer */}
+      {/* Check for login and registration pages */}
       {!loginPage && !registrationPage && <Header />}
 
       <Routes>
@@ -37,7 +30,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
       </Routes>
 
-      {/* Conditionally render Footer */}
+      {/* Check for login and registration pages */}
       {!loginPage && !registrationPage && <Footer />}
     </Router>
   );
