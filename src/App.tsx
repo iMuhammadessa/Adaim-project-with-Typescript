@@ -10,11 +10,10 @@ import Footer from "./components/footer";
 import Registration from "./pages/registration";
 
 function App() {
-  const registrationPage = window.location.pathname === "/registration";
-
   return (
     <Router>
-      {registrationPage ? null : <Header />}
+      {/* Show Header and Footer only if the current page is not Registration */}
+      {window.location.pathname !== "/registration" && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,7 +25,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
       </Routes>
 
-      {registrationPage ? null : <Footer />}
+      {window.location.pathname !== "/registration" && <Footer />}
     </Router>
   );
 }
