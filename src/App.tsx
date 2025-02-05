@@ -12,7 +12,6 @@ import Registration from "./pages/registration";
 function App() {
   return (
     <Router>
-      {/* Show Header and Footer only if the current page is not Registration */}
       {window.location.pathname !== "/registration" && <Header />}
 
       <Routes>
