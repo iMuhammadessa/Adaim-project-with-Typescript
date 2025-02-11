@@ -1,0 +1,96 @@
+[33m7c8f7fc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32m50-dashboard[m[33m)[m remove extra space from footer
+[33maf5c1a2[m Merge pull request #49 from Itx-Ahmed/48-Registration
+[33m27fd712[m[33m ([m[1;31morigin/48-Registration[m[33m, [m[1;32m48-Registration[m[33m)[m Registration
+[33m26360bd[m hide Header and Footer
+[33m4513544[m Registration
+[33m0d7f9a5[m resolved
+[33m4faf611[m hide heaer and footer
+[33mbb1e74f[m hide header and footer
+[33m09438ac[m resolved
+[33md51bd86[m resolved-conflicts
+[33m59b40dd[m conflicts resolved
+[33m5f2f802[m conflicts resolved
+[33m1d3eea6[m conflicts resolved
+[33m3269c23[m Merge branch '48-Registration' of https://github.com/Itx-Ahmed/Adaim-project-with-Typescript into 48-Registration
+[33m411a762[m Use Formik form and also wrap in formik done
+[33m8ce4db5[m Registration Form
+[33md49d66c[m Registration
+[33m944f2c9[m Registration
+[33mc6d9cb3[m conflicts resolved
+[33md979866[m Registration
+[33m1764dfe[m conflicts resolved
+[33m02964f2[m Use Formik form and also wrap in formik done
+[33mc3bbf33[m Merge pull request #45 from Itx-Ahmed/44-Login
+[33mfed1338[m[33m ([m[1;31morigin/44-Login[m[33m, [m[1;32m44-Login[m[33m)[m token saved in localstorage
+[33m1315579[m fetch login api
+[33me3fa63b[m Registration Form
+[33m1db66d7[m Registration
+[33m036a3ff[m Registration
+[33m25493c2[m Registration
+[33m81babed[m updated file
+[33m61e3121[m service/user deleted
+[33mafab068[m changes done!
+[33mdce0a0f[m Login page updated
+[33mfa97078[m Login page updated
+[33m52b592f[m Login page
+[33mf057c41[m login page
+[33m779f789[m login page
+[33m5b48ba6[m[33m ([m[1;32m43-Dashboard-UI[m[33m)[m Merge pull request #36 from Itx-Ahmed/35-Our-Contact
+[33m49a2ca3[m[33m ([m[1;31morigin/35-Our-Contact[m[33m, [m[1;32m35-Our-Contact[m[33m)[m file updated
+[33m6170e0e[m Merge pull request #42 from Itx-Ahmed/37-Services
+[33mb66e0e5[m[33m ([m[1;31morigin/37-Services[m[33m, [m[1;32m37-Services[m[33m)[m Resolved merge conflicts and updated files
+[33mb53a976[m service page completed
+[33ma46d0ad[m service page added
+[33mbb9e2f3[m our contact
+[33mbbc3909[m Resolved conflict in package-lock.json
+[33maa587ab[m Merge pull request #41 from Itx-Ahmed/create-header-and-footer
+[33mcf978dc[m Resolved merge conflict
+[33mac02fa7[m[33m ([m[1;31morigin/create-header-and-footer[m[33m, [m[1;32mcreate-header-and-footer[m[33m)[m file updated
+[33ma95f9a2[m added new menu for mobile device
+[33m9bc42ea[m formik and yup validation completed
+[33m96f03b3[m Formik and yup validation completed
+[33m53e1de4[m[33m ([m[1;31morigin/15-our-Team[m[33m, [m[1;32m15-our-Team[m[33m)[m service secti
+[33m0bff982[m added file
+[33m9a14cf3[m added ceo-profile-section
+[33m46eee68[m Merge pull request #40 from Itx-Ahmed/39-Ceo-Profile
+[33m4710958[m[33m ([m[1;31morigin/39-Ceo-Profile[m[33m, [m[1;32m39-Ceo-Profile[m[33m)[m ceo-profile component
+[33mf3f8fc3[m again updated file
+[33me6b4d36[m helpsuccessbanner added
+[33m62a2362[m[33m ([m[1;32m38-Client-Engagement[m[33m)[m Merge pull request #34 from Itx-Ahmed/33-Our-Announcements
+[33m2aac2b9[m[33m ([m[1;31morigin/33-Our-Announcements[m[33m, [m[1;32m33-Our-Announcements[m[33m)[m our announcement component approved
+[33m851e124[m three new cards added here
+[33m4a4296a[m Merge pull request #32 from Itx-Ahmed/31-Our-Blog
+[33m8b44be1[m Contact us
+[33m220e537[m changes saved
+[33m6c8c0cc[m our-announcement page designed
+[33m80415fe[m blog component designed
+[33m4e899d5[m Merge pull request #18 from Itx-Ahmed/15-our-Team
+[33mf03999b[m conflicts solved
+[33m4071c28[m Resolved merge conflict in index.tsx
+[33m147d2c7[m our Team Component has been designed
+[33m3b2a9a4[m Resolved merge conflict in index.tsx
+[33m22a0c5e[m our Team Component has been designed
+[33m899b8f8[m Merge pull request #22 from Itx-Ahmed/19-Our-Customers
+[33m80775b5[m[33m ([m[1;31morigin/19-Our-Customers[m[33m, [m[1;32m19-Our-Customers[m[33m)[m Resolved merge conflict in src/pages/home/index.tsx
+[33md929b31[m Merge pull request #26 from Itx-Ahmed/25-who-we-are-section
+[33meb458d6[m[33m ([m[1;31morigin/25-who-we-are-section[m[33m, [m[1;32m25-who-we-are-section[m[33m)[m Resolved merge conflict in src/pages/about/index.tsx
+[33m929e2da[m Merge pull request #29 from Itx-Ahmed/27-Our-Packages
+[33m9824d11[m our customer conflicts solved
+[33m2cf83ce[m Merge branch '25-who-we-are-section' of https://github.com/Itx-Ahmed/Adaim-project-with-Typescript into 25-who-we-are-section
+[33m7016eae[m who we are section designed
+[33m2099ccd[m Merge branch 'main' into 25-who-we-are-section
+[33mf020e46[m Changes done
+[33m1835d0a[m Reach out component designed
+[33m076c9d9[m[33m ([m[1;31morigin/27-Our-Packages[m[33m, [m[1;32m27-Our-Packages[m[33m)[m changes saved
+[33mede45fb[m Resolved merge conflict in src/pages/about/index.tsx
+[33m849aaed[m Remove fragment and updated file
+[33m20a562d[m why choose us component designed
+[33ma89cbb3[m saved in home page
+[33m5b369c7[m git commit -m "changes saved in home page "
+[33m6a2f231[m updated this component
+[33me3583ff[m Merge branch '15-our-Team' of https://github.com/Itx-Ahmed/Adaim-project-with-Typescript into 15-our-Team
+[33m6811333[m our Team Component has been designed
+[33m6bff450[m Merge branch '15-our-Team' of https://github.com/Itx-Ahmed/Adaim-project-with-Typescript into 15-our-Team
+[33m51af92f[m our-team-component updated
+[33mccde36b[m our Team Component has been designed
+[33m0101c9e[m our-team-component updated
