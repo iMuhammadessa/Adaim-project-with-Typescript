@@ -17,13 +17,15 @@ import DashboardBlogPage from "./pages/dashboard/blog";
 import ClientsDashboard from "./pages/dashboard/clients";
 import DashboardClientsadspage from "./pages/dashboard/clientAds";
 import DashboardCompaniesPage from "./pages/dashboard/Companies";
+
 function App() {
-  const isExactRegistrationPage =
-    window.location.pathname.toLowerCase() === "/registration";
+  const path = window.location.pathname.toLowerCase();
+  const isExactRegistrationPage = path === "/registration";
+  const isDashboardRoute = path.includes("/dashboard");
 
   return (
     <Router>
-      {!isExactRegistrationPage && <Header />}
+      {!isExactRegistrationPage && !isDashboardRoute && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -34,7 +36,6 @@ function App() {
         <Route path="/registration" element={<Registration />} />
 
         {/* Dashboard Routes */}
-
         <Route path="/dashboard" element={<MainDashboard />}>
           <Route index element={<DashboardAnnouncementpage />} />
           <Route path="announcement" element={<DashboardAnnouncementpage />} />
@@ -47,7 +48,7 @@ function App() {
           <Route path="users" element={<DashboardUsersPage />} />
         </Route>
       </Routes>
-      {!isExactRegistrationPage && <Footer />}
+      {!isExactRegistrationPage && !isDashboardRoute && <Footer />}
     </Router>
   );
 }
