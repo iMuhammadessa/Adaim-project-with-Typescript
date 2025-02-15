@@ -9,14 +9,14 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Registration from "./pages/registration";
 import MainDashboard from "./pages/dashboard";
-import DashboardContactUsPage from "./pages/dashboard/contactus";
-import DashboardTeamPage from "./pages/dashboard/team";
-import DashboardUsersPage from "./pages/dashboard/user";
 import DashboardAnnouncementpage from "./pages/dashboard/announcement";
 import DashboardBlogPage from "./pages/dashboard/blog";
 import ClientsDashboard from "./pages/dashboard/clients";
 import DashboardClientsadspage from "./pages/dashboard/clientAds";
 import DashboardCompaniesPage from "./pages/dashboard/Companies";
+import DashboardTeamPage from "./pages/dashboard/team";
+import DashboardUsersPage from "./pages/dashboard/user";
+import DashboardContactUsPage from "./pages/dashboard/contactus";
 
 function App() {
   const path = window.location.pathname.toLowerCase();
@@ -43,9 +43,9 @@ function App() {
           <Route path="clients" element={<ClientsDashboard />} />
           <Route path="clientads" element={<DashboardClientsadspage />} />
           <Route path="companies" element={<DashboardCompaniesPage />} />
-          <Route path="contactus" element={<DashboardContactUsPage />} />
           <Route path="team" element={<DashboardTeamPage />} />
           <Route path="users" element={<DashboardUsersPage />} />
+          <Route path="contactus" element={<DashboardContactUsPage />} />
         </Route>
       </Routes>
       {!isExactRegistrationPage && !isDashboardRoute && <Footer />}

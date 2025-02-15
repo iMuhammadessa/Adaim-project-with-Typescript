@@ -44,12 +44,7 @@ function DashboardNavigation() {
         >
           <FaBuilding /> <span>Companies</span>
         </Link>
-        <Link
-          to="/dashboard/contactus"
-          className="hover:text-gray-300 flex items-center space-x-2"
-        >
-          <FaEnvelope /> <span>Contact Us</span>
-        </Link>
+
         <Link
           to="/dashboard/team"
           className="hover:text-gray-300 flex items-center space-x-2"
@@ -61,6 +56,12 @@ function DashboardNavigation() {
           className="hover:text-gray-300 flex items-center space-x-2"
         >
           <FaUser /> <span>Users</span>
+        </Link>
+        <Link
+          to="/dashboard/contactus"
+          className="hover:text-gray-300 flex items-center space-x-2"
+        >
+          <FaEnvelope /> <span>Contact Us</span>
         </Link>
       </nav>
     </div>
