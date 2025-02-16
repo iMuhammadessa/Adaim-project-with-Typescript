@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function DashboardNavigation() {
   return (
-    <div className="h-screen bg-white w-[17%] p-4 shadow-md mt-[5%]">
+    <div className="h-screen bg-white w-[16%] p-4 shadow-md flex flex-col justify-start">
       <nav className="flex flex-col space-y-4">
         <Link
           to="/dashboard/announcement"
@@ -35,13 +35,6 @@ function DashboardNavigation() {
           Companies
         </Link>
         <Link
-          to="/dashboard/contactus"
-          className="text-gray-700 hover:text-blue-500"
-        >
-          Contact Us
-        </Link>
-
-        <Link
           to="/dashboard/team"
           className="text-gray-700 hover:text-blue-500"
         >
@@ -52,6 +45,12 @@ function DashboardNavigation() {
           className="text-gray-700 hover:text-blue-500"
         >
           Users
+        </Link>
+        <Link
+          to="/dashboard/contactus"
+          className="text-gray-700 hover:text-blue-500"
+        >
+          Contact Us
         </Link>
       </nav>
     </div>

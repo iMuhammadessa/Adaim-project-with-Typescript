@@ -20,12 +20,15 @@ import DashboardCompaniesPage from "./pages/dashboard/Companies";
 import Login from "./pages/login";
 
 function App() {
-  const isExactRegistrationPage =
-    window.location.pathname.toLowerCase() === "/registration";
+  const currentPath = window.location.pathname.toLowerCase();
+  const isHiddenPage =
+    currentPath === "/registration" ||
+    currentPath === "/login" ||
+    currentPath.startsWith("/dashboard"); // ✅ Dashboard aur uske subroutes ke liye Header/Footer hide hoga
 
   return (
     <Router>
-      {!isExactRegistrationPage && <Header />}
+      {!isHiddenPage && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,7 +40,6 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         {/* Dashboard Routes */}
-
         <Route path="/dashboard" element={<MainDashboard />}>
           <Route index element={<DashboardAnnouncementpage />} />
           <Route path="announcement" element={<DashboardAnnouncementpage />} />
@@ -50,7 +52,7 @@ function App() {
           <Route path="users" element={<DashboardUsersPage />} />
         </Route>
       </Routes>
-      {!isExactRegistrationPage && <Footer />}
+      {!isHiddenPage && <Footer />}
     </Router>
   );
 }
