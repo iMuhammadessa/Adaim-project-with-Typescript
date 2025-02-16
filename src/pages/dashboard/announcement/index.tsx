@@ -1,11 +1,10 @@
 function DashboardAnnouncementPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-start bg-gray-50 p-6 w-full relative mt-[10%]">
-      <div className="flex justify-between items-center w-full max-w-6xl mx-auto">
-        <h2 className="text-left text-3xl font-bold mb-6 text-gray-800 mt-[10%]">
-          Announcements
-        </h2>
-        <button className="bg-gradient-to-r from-green-500 to-teal-600 text-white px-4 py-2 rounded-lg shadow-md hover:from-teal-600 hover:to-green-500 transition-all">
+    <div className="min-h-screen flex flex-col bg-gray-50 p-6 w-full">
+      {/* Header Section */}
+      <div className="flex items-center justify-start w-full max-w-6xl mx-auto mb-6">
+        <h2 className="text-3xl font-bold text-gray-800">Announcements</h2>
+        <button className="ml-auto bg-gradient-to-r from-green-500 to-teal-600 text-white px-4 py-2 rounded-lg shadow-md hover:from-teal-600 hover:to-green-500 transition-all">
           Add
         </button>
       </div>
