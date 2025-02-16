@@ -17,6 +17,8 @@ import DashboardBlogPage from "./pages/dashboard/blog";
 import ClientsDashboard from "./pages/dashboard/clients";
 import DashboardClientsadspage from "./pages/dashboard/clientAds";
 import DashboardCompaniesPage from "./pages/dashboard/Companies";
+import Login from "./pages/login";
+
 function App() {
   const isExactRegistrationPage =
     window.location.pathname.toLowerCase() === "/registration";
@@ -32,6 +34,7 @@ function App() {
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Dashboard Routes */}
 

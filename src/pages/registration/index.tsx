@@ -1,5 +1,8 @@
+import { useMutation } from "@tanstack/react-query";
 import { Formik, useFormik } from "formik";
 import * as Yup from "yup";
+import { asyncRegisterUser } from "../../api/user/fetcher";
+import { useNavigate } from "react-router-dom";
 
 function RegistrationForm() {
   const formik = useFormik({
@@ -17,8 +20,21 @@ function RegistrationForm() {
         .min(6, "Password must be at least 6 characters")
         .required("Password is required"),
     }),
-    onSubmit: () => {
-      alert("Form Submitted Successfully");
+    onSubmit: (values) => {
+      // alert("Form Submitted Successfully");
+      console.log("values", values);
+    },
+  });
+
+  const navigate = useNavigate();
+  const userRegisterMutation = useMutation({
+    mutationFn: asyncRegisterUser,
+    onSuccess: (res) => {
+      // console.log("MutationResponse", res);
+      navigate("/login");
+    },
+    onError: (error) => {
+      console.log("MutationError", error);
     },
   });
 
@@ -44,8 +60,9 @@ function RegistrationForm() {
               .min(6, "Password must be at least 6 characters")
               .required("Password is required"),
           })}
-          onSubmit={() => {
-            alert("Form Submitted Successfully");
+          onSubmit={(values) => {
+            // console.log("values", values);
+            userRegisterMutation.mutate(values);
           }}
         >
           {(formik) => (

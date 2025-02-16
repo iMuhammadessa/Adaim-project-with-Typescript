@@ -1,5 +1,8 @@
+import { useMutation } from "@tanstack/react-query";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { asyncLoginUser } from "../../api/user/fetcher";
 
 function Login() {
   const validationSchema = Yup.object({
@@ -11,6 +14,19 @@ function Login() {
       .required("Password is required"),
   });
 
+  const navigate = useNavigate();
+  const userLoginMutation = useMutation({
+    mutationFn: asyncLoginUser,
+    onSuccess: (res) => {
+      // console.log("MutationResponse", res);
+      navigate("/dashboard");
+    },
+    onError: (error) => {
+      console.log("MutationError", error);
+      alert(error.message);
+    },
+  });
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -18,24 +34,7 @@ function Login() {
     },
     validationSchema,
     onSubmit: async (values) => {
-      try {
-        const responseData = await fetch("http://localhost:3009/api/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        });
-
-        const data = await responseData.json();
-        console.log("Check the Data:", data);
-
-        if (data.token) {
-          localStorage.setItem("authToken", data.token);
-        }
-      } catch (error) {
-        console.error("Something went wrong, try again", error);
-      }
+      userLoginMutation.mutate(values);
     },
   });
 
