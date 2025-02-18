@@ -1,56 +1,66 @@
 import { Link } from "react-router-dom";
+import {
+  FaBullhorn,
+  FaBlog,
+  FaUsers,
+  FaAd,
+  FaBuilding,
+  FaEnvelope,
+  FaUsersCog,
+  FaUser,
+} from "react-icons/fa";
 
 function DashboardNavigation() {
   return (
-    <div className="h-screen bg-white w-[16%] p-4 shadow-md flex flex-col justify-start">
-      <nav className="flex flex-col space-y-4">
+    <div className="h-screen w-[100%] md:w-[20%] bg-blue-700 p-5 shadow-md fixed md:relative top-0 left-0">
+      <nav className="flex flex-col space-y-6 text-white">
         <Link
           to="/dashboard/announcement"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Announcement
+          <FaBullhorn /> <span>Announcement</span>
         </Link>
         <Link
           to="/dashboard/blog"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Blog
+          <FaBlog /> <span>Blog</span>
         </Link>
         <Link
           to="/dashboard/clients"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Clients
+          <FaUsers /> <span>Clients</span>
         </Link>
         <Link
           to="/dashboard/clientads"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Client Ads
+          <FaAd /> <span>Client Ads</span>
         </Link>
         <Link
           to="/dashboard/companies"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Companies
+          <FaBuilding /> <span>Companies</span>
         </Link>
         <Link
           to="/dashboard/team"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Team
+          <FaUsersCog /> <span>Team</span>
         </Link>
         <Link
           to="/dashboard/users"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Users
+          <FaUser /> <span>Users</span>
         </Link>
         <Link
           to="/dashboard/contactus"
-          className="text-gray-700 hover:text-blue-500"
+          className="hover:text-gray-300 flex items-center space-x-2"
         >
-          Contact Us
+          <FaEnvelope /> <span>Contact Us</span>
         </Link>
       </nav>
     </div>

@@ -21,8 +21,8 @@ function DashboardTeamPage() {
               <td className="px-4 py-2 border">Name is here</td>
               <td className="px-4 py-2 border">Job is here</td>
               <td className="px-4 py-2 border">Phone no is here</td>
-              <td className="px-4 py-2 border">Adress is here</td>
-              <td className="px-4 py-2 border">Image is Here</td>
+              <td className="px-4 py-2 border">Address is here</td>
+              <td className="px-4 py-2 border">Image is here</td>
             </tr>
           </tbody>
         </table>
