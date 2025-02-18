@@ -17,15 +17,19 @@ import DashboardCompaniesPage from "./pages/dashboard/Companies";
 import DashboardTeamPage from "./pages/dashboard/team";
 import DashboardUsersPage from "./pages/dashboard/user";
 import DashboardContactUsPage from "./pages/dashboard/contactus";
+import Login from "./pages/login";
 
 function App() {
-  const path = window.location.pathname.toLowerCase();
-  const isExactRegistrationPage = path === "/registration";
-  const isDashboardRoute = path.includes("/dashboard");
+  const currentPath = window.location.pathname.toLowerCase();
+  const isHiddenPage =
+    currentPath === "/registration" ||
+    currentPath === "/login" ||
+    currentPath.startsWith("/dashboard");
 
   return (
     <Router>
-      {!isExactRegistrationPage && !isDashboardRoute && <Header />}
+      {!isHiddenPage && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -34,6 +38,7 @@ function App() {
         <Route path="/announcement" element={<Announcement />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<MainDashboard />}>
@@ -48,7 +53,8 @@ function App() {
           <Route path="contactus" element={<DashboardContactUsPage />} />
         </Route>
       </Routes>
-      {!isExactRegistrationPage && !isDashboardRoute && <Footer />}
+
+      {!isHiddenPage && <Footer />}
     </Router>
   );
 }
