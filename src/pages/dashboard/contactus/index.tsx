@@ -19,7 +19,7 @@ function DashboardContactUsPage() {
           <tbody>
             <tr className="text-sm text-gray-700 bg-white hover:bg-gray-100">
               <td className="px-4 py-2 border">1</td>
-              <td className="px-4 py-2 border">name is here</td>
+              <td className="px-4 py-2 border">Name is here</td>
               <td className="px-4 py-2 border">Email is here</td>
               <td className="px-4 py-2 border">Message is here</td>
               <td className="px-4 py-2 border">Phone no is here</td>

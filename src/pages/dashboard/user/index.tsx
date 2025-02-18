@@ -15,28 +15,32 @@ function DashboardUsersPage() {
   console.log("user data response is here", data);
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p className="text-red-600">Error: {error.message}</p>;
 
   const users = data?.users || data?.data || [];
 
   return (
-    <div className="min-h-screen px-4 py-6 flex flex-col items-center bg-gray-50">
-      <div className="w-full max-w-6xl flex justify-between items-center mb-4">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Users</h1>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-          Add User
-        </button>
-      </div>
+    <div className="min-h-screen w-full bg-gray-50 p-4 md:p-6 flex flex-col">
+      {/* Header and Table Section in One Container */}
+      <div className="w-full max-w-full mx-auto bg-white shadow-lg rounded-lg p-4 md:p-6">
+        {/* Header Section (Title Left Side) */}
+        <div className="flex items-center justify-between w-full mb-4 md:mb-6">
+          <h2 className="text-lg md:text-3xl font-bold text-gray-800 text-left">
+            Users
+          </h2>
+          <button className="bg-gradient-to-r from-green-500 to-teal-600 text-white px-3 md:px-4 py-2 rounded-lg shadow-md hover:from-teal-600 hover:to-green-500 transition-all">
+            Add
+          </button>
+        </div>
 
-      <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-4 overflow-hidden">
-        <div className="overflow-x-auto w-full">
-          <table className="w-full min-w-[600px] border border-gray-300 rounded-lg">
+        {/* Table Section (Proper Layout) */}
+        <div className="overflow-x-auto mt-2 md:mt-5">
+          <table className="w-full min-w-full border border-gray-300 rounded-lg">
             <thead className="bg-gray-200 text-gray-700">
-              <tr className="text-left text-sm sm:text-base">
-                <th className="px-4 py-2 border whitespace-nowrap">ID</th>
-                <th className="px-4 py-2 border whitespace-nowrap">Name</th>
-                <th className="px-4 py-2 border whitespace-nowrap">Email</th>
-                <th className="px-4 py-2 border whitespace-nowrap">Password</th>
+              <tr className="text-left text-xs md:text-sm">
+                <th className="px-2 md:px-4 py-2 border">ID</th>
+                <th className="px-2 md:px-4 py-2 border">Name</th>
+                <th className="px-2 md:px-4 py-2 border">Email</th>
               </tr>
             </thead>
             <tbody>
@@ -44,25 +48,16 @@ function DashboardUsersPage() {
                 users.map((user: any) => (
                   <tr
                     key={user.id}
-                    className="text-sm sm:text-base text-gray-700 bg-white hover:bg-gray-100"
+                    className="text-xs md:text-sm text-gray-700 bg-white hover:bg-gray-100"
                   >
-                    <td className="px-4 py-2 border whitespace-nowrap">
-                      {user.id}
-                    </td>
-                    <td className="px-4 py-2 border whitespace-nowrap">
-                      {user.name}
-                    </td>
-                    <td className="px-4 py-2 border whitespace-nowrap">
-                      {user.email}
-                    </td>
-                    <td className="px-4 py-2 border whitespace-nowrap">
-                      {user.password}
-                    </td>
+                    <td className="px-2 md:px-4 py-2 border">{user.id}</td>
+                    <td className="px-2 md:px-4 py-2 border">{user.name}</td>
+                    <td className="px-2 md:px-4 py-2 border">{user.email}</td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan={4} className="text-center p-4 text-gray-600">
+                  <td colSpan={3} className="text-center p-4 text-gray-600">
                     No users found.
                   </td>
                 </tr>

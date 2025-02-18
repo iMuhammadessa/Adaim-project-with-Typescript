@@ -12,7 +12,7 @@ import {
 
 function DashboardNavigation() {
   return (
-    <div className="h-screen w-[17%] bg-blue-700  p-4 shadow-md ">
+    <div className="h-screen w-[100%] md:w-[20%] bg-blue-700 p-5 shadow-md fixed md:relative top-0 left-0">
       <nav className="flex flex-col space-y-6 text-white">
         <Link
           to="/dashboard/announcement"
@@ -44,7 +44,6 @@ function DashboardNavigation() {
         >
           <FaBuilding /> <span>Companies</span>
         </Link>
-
         <Link
           to="/dashboard/team"
           className="hover:text-gray-300 flex items-center space-x-2"
