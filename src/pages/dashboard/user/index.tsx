@@ -14,8 +14,13 @@ function DashboardUsersPage() {
 
   console.log("user data response is here", data);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p className="text-red-600">Error: {error.message}</p>;
+  if (isLoading) {
+    return <p className="text-red-600">isLoading...</p>;
+  }
+
+  if (error) {
+    return <p className="text-red-600">Something Went Wrong...</p>;
+  }
 
   const users = data?.users || data?.data || [];
 
