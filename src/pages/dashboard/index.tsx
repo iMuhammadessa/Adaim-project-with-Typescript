@@ -8,7 +8,7 @@ function MainDashboard() {
         <DashboardNavigation />
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center p-6 md:pl-8">
+      <div className="flex-1 flex flex-col items-center justify-start p-6 md:pl-8">
         <Outlet />
       </div>
     </div>
