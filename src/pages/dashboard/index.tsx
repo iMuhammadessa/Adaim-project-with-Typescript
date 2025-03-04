@@ -1,14 +1,31 @@
+import { useState } from "react";
 import DashboardNavigation from "../../components/dashboard/navigation";
 import { Outlet } from "react-router-dom";
 
 function MainDashboard() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-white">
-      <div className="w-full md:w-64 md:h-full bg-gray-100 shadow-md">
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div
+        className={`w-64 h-screen bg-[#1D4ED8] text-white shadow-lg fixed md:relative transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-64"
+        } md:translate-x-0 transition-transform duration-300 ease-in-out`}
+      >
         <DashboardNavigation />
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-start p-6 md:pl-8">
+      {/* Toggle Button (Mobile Only) */}
+      <button
+        className="absolute top-4 left-4 md:hidden bg-blue-600 text-white p-2 rounded"
+        onClick={() => setSidebarOpen(!isSidebarOpen)}
+      >
+        ☰
+      </button>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col items-center justify-start p-6 md:pl-8 md:ml-64">
         <Outlet />
       </div>
     </div>
