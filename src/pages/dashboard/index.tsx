@@ -25,7 +25,7 @@ function MainDashboard() {
       </button>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-start p-6 md:pl-8 md:ml-64">
+      <div className="flex-1 w-full flex flex-col items-start justify-start p-6 md:p-1">
         <Outlet />
       </div>
     </div>
