@@ -29,7 +29,7 @@ export const asyncUpdateAnnouncement = async (id: any, updatedData: any) => {
 };
 
 //  Create an  Announcement
-export const asyncInsertAnnouncement = async (newData: any) => {
+export const asyncCreateAnnouncement = async (newData: any) => {
   try {
     const response = await API_URL.post("api/announce", newData);
     return response.data;
