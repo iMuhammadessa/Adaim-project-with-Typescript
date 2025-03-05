@@ -132,7 +132,7 @@ function DashboardBlogPage() {
                     {item.description}
                   </td>
                   <td className="px-2 sm:px-4 py-2 border">{item.image}</td>
-                  <td className="px-2 sm:px-4 py-2 border flex gap-2">
+                  <td className="px-2 sm:px-4 py-2 border flex flex-wrap gap-2 justify-center">
                     <button
                       className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition-all"
                       onClick={() => deleteMutation.mutate(item.id)}
