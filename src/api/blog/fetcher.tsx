@@ -1,21 +1,5 @@
 import { API_URL } from "../../config/Config";
 
-//  To Read all Blogs
-export const asyncGetAllBlogs = async () => {
-  try {
-    // console.log("Fetching all users data...");
-
-    const response = await API_URL.get("/api/blog");
-
-    // console.log("API Response:", response);
-
-    return response.data.data;
-  } catch (error) {
-    console.log("Something went wrong...", error);
-    return error;
-  }
-};
-
 // To Delete a Blog
 export const asyncDeleteBlog = async (id: number) => {
   try {
@@ -34,8 +18,20 @@ export const asyncUpdateBlog = async (id: number, updatedBlogData: any) => {
     const response = await API_URL.patch(`/api/blog/${id}`, updatedBlogData);
     console.log("Blog updated successfully:", response.data);
     return response.data;
-  } catch (error) {
+  } catch (error: any) {
     console.log("Something went wrong updating blog...", error);
+    return error;
+  }
+};
+
+// To Create a Blog
+export const asyncCreateBlog = async (newBlogData: any) => {
+  try {
+    const response = await API_URL.post(`/api/blog`, newBlogData);
+    console.log("Blog created successfully:", response.data);
+    return response.data;
+  } catch (error: any) {
+    console.log("Something went wrong creating the blog...", error);
     return error;
   }
 };
