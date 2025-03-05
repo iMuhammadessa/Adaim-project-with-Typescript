@@ -25,7 +25,7 @@ function DashboardUsersPage() {
   const users = data?.users || data?.data || [];
 
   return (
-    <div className="min-h-screen w-full bg-gray-50 p-4 md:p-6 flex flex-col">
+    <div className="min-h-screen w-full bg-gray-50 p-4 md:p-6 f lex flex-col">
       {/* Header and Table Section in One Container */}
       <div className="w-full max-w-full mx-auto bg-white shadow-lg rounded-lg p-4 md:p-6">
         {/* Header Section (Title Left Side) */}
