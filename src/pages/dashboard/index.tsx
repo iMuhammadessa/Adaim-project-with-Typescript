@@ -1,6 +1,6 @@
-import { useState } from "react";
-import DashboardNavigation from "../../components/dashboard/navigation";
 import { Outlet } from "react-router-dom";
+import DashboardNavigation from "../../components/dashboard/navigation";
+import { useState } from "react";
 
 function MainDashboard() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
