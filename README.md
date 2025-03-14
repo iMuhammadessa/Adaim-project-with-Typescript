@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+<h1 align="center">Adaim Portfolio</h1>
+<a href="#">
+  <div align="center">
+    <img src="screenshot.png" width='700'/>
+  </div>
+</a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- Portfolio
+- Services
+- Blog
+- Announcement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How To Run
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone https://github.com/Itx-Ahmed/Adaim-project-with-Typescript.git
+cd Adaim-project-with-Typescript
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Authors
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+You can get in touch with me on my LinkedIn Profile:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Muhammad Essa
+
+[![LinkedIn Link](https://img.shields.io/badge/Connect-imuhammadessa-blue.svg?logo=linkedin&longCache=true&style=social&label=Connect)](https://www.linkedin.com/in/imuhammadessa)
+
+You can also follow my GitHub Profile to stay updated about my latest projects:
+
+[![GitHub Follow](https://img.shields.io/badge/Connect-imuhammadessa-blue.svg?logo=Github&longCache=true&style=social&label=Follow)](https://github.com/imuhammadessa)
+
+### Ahmad Iqbal
+
+LinkedIn: https://www.linkedin.com/in/ahmad-iqbal-/
+GitHub: https://github.com/Itx-Ahmed
+
+If you liked the repo then kindly support it by giving it a star ⭐!
