@@ -1,8 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const teamMembers = [
   {
@@ -34,42 +31,45 @@ const teamMembers = [
 
 function OurTeam() {
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 mt-[6rem]">
+    <section className="text-white py-12">
+      <div className="container mx-auto text-center px-4">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl text-black font-bold mb-6 mt-[6rem]">
           Our Team
         </h2>
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg text-black mb-10 max-w-3xl mx-auto">
           AD AIM Marketing is comprised of a team of experienced professionals
           who bring a wealth of industry knowledge and hands-on expertise to
           every project, ensuring top-notch delivery and client satisfaction.
         </p>
+
+        {/* Swiper Carousel */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 1 },
+            480: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           className="pb-10"
         >
           {teamMembers.map((member, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-40 h-40 mx-auto object-cover rounded-full mb-6 border-4 border-gray-200"
+                  className="w-32 h-32 md:w-40 md:h-40 mx-auto object-cover rounded-full mb-4 border-4 border-gray-300"
                 />
-                <h3 className="text-xl font-semibold text-gray-800">
+                <h3 className="text-xl font-semibold text-gray-900">
                   {member.name}
                 </h3>
-                <p className="text-gray-500">{member.role}</p>
+                <p className="text-gray-600">{member.role}</p>
               </div>
             </SwiperSlide>
           ))}
