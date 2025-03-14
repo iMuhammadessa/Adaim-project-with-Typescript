@@ -1,7 +1,7 @@
 <h1 align="center">Adaim Portfolio</h1>
 <a href="#">
   <div align="center">
-    <img src="screenshot.png" width='700'/>
+    <img src="Screenshot.png" width='700'/>
   </div>
 </a>
 
