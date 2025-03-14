@@ -1,38 +1,58 @@
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaEnvelope,
+} from "react-icons/fa";
+
 function ReachOut() {
   return (
-    <div className="flex flex-col items-center justify-center p-6 space-y-4 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center ">
-        Would you like to start a project with us?
+    <div className="flex flex-col items-center justify-center px-6 py-16 bg-white">
+      {/* Section Title */}
+      <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">
+        Let's Start Your Project Together!
       </h1>
+      <p className="text-lg text-gray-600 text-center mb-10">
+        Get in touch with us and let’s bring your vision to life.
+      </p>
 
-      <div className="w-full max-w-3xl h-auto bg-white shadow-md p-6 md:p-12 rounded-md relative">
-        <p className="text-lg mb-4 font-medium">
-          You can visit us at the following address:
-        </p>
+      {/* Contact Card */}
+      <div className="w-full max-w-3xl bg-white shadow-xl rounded-lg p-8 md:p-12  relative text-gray-800">
+        {/* Address Section */}
+        <div className="flex items-start gap-4 mb-6">
+          <FaMapMarkerAlt className="text-blue-600 text-2xl mt-1" />
+          <div>
+            <h3 className="text-lg font-semibold">Visit Us:</h3>
+            <address className="text-gray-600 text-base leading-relaxed">
+              FF04, 1st Floor, Awan Tower, <br />
+              Near Mercy Teaching Hospital, <br />
+              Tehkal Payyan, University Road, <br />
+              Peshawar
+            </address>
+          </div>
+        </div>
 
-        <address className="text-sm space-y-3 font-semibold">
-          <p>FF04, 1st Floor, Awan Tower,</p>
-          <p>Near Mercy Teaching Hospital,</p>
-          <p>Tehkal Payyan, University Road,</p>
-          <p>Peshawar</p>
-        </address>
+        {/* Email Section */}
+        <div className="flex items-center gap-4 mb-6">
+          <FaEnvelope className="text-blue-600 text-2xl" />
+          <p className="text-lg font-medium">
+            Email:{" "}
+            <a
+              href="mailto:adaimmarketingagency@gmail.com"
+              className="text-blue-500 hover:text-blue-700 underline transition-all duration-300"
+            >
+              contact@admain.com.pk
+            </a>
+          </p>
+        </div>
 
-        <p className="text-lg font-medium">
-          Email:
-          <a
-            href="mailto:adaimmarketingagency@gmail.com"
-            className="text-blue-500 hover:underline"
-          >
-            adaimmarketingagency@gmail.com
-          </a>
-        </p>
-
-        <div className="absolute top-8 right-5 space-x-4 flex flex-col md:flex-row items-center">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none mt-4 md:mt-0">
-            Call Now
+        {/* Buttons Section */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
+          <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-cyan-500 hover:to-teal-600 text-white font-semibold rounded-md  transition-all duration-300 focus:outline-none shadow-md">
+            <FaPhoneAlt /> Call Now
           </button>
-          <button className="px-4 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none mt-4 md:mt-0">
-            Chat on WhatsApp
+          <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold rounded-md hover:from-green-700 hover:to-green-500 transition-all duration-300 focus:outline-none shadow-md">
+            <FaWhatsapp /> Chat on WhatsApp
           </button>
         </div>
       </div>
