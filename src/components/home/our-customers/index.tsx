@@ -1,7 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const clients = [
@@ -24,40 +21,42 @@ const clients = [
 
 const OurCustomers = () => {
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 mt-5">
+    <section className="bg-gradient-to-r from-[#0F2027] via-[#203A43] to-[#2C5364] text-white py-12">
+      <div className="container mx-auto text-center px-4">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 mt-5">
           Our Customers
         </h2>
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg text-gray-200 mb-10 max-w-3xl mx-auto">
           Our customers are at the heart of everything we do. We are dedicated
           to providing exceptional service and exceeding their expectations at
-          every opportunity. The following are our esteemed clients, with whom
-          we have had the privilege of working closely to achieve their goals.
+          every opportunity. Here are some of our esteemed clients.
         </p>
+
+        {/* Swiper Carousel */}
         <Swiper
           spaceBetween={20}
-          slidesPerView={5}
+          slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 2 },
+            480: { slidesPerView: 1 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
+            1280: { slidesPerView: 4 },
           }}
           loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation={true}
           modules={[Pagination, Navigation, Autoplay]}
-          className="px-4"
+          className="px-2 md:px-4"
         >
           {clients.map((client, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="bg-white p-6 rounded-lg shadow-lg flex justify-center items-center">
+              <div className="p-4 m-5 md:p-6 rounded-lg transition-all duration-300 flex justify-center items-center">
                 <img
                   src={client.src}
                   alt={client.alt}
-                  className="w-32 h-32 object-contain "
+                  className="w-32 h-32 rounded-lg md:w-32 md:h-32 object-contain"
                 />
               </div>
             </SwiperSlide>
